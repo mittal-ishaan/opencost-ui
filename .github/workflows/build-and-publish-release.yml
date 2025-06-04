@@ -119,6 +119,6 @@ jobs:
           IMAGE_TAG_UI_VERSION: ${{ steps.tags.outputs.IMAGE_TAG_UI_VERSION }}
           RELEASE_VERSION: ${{ steps.version_number.outputs.RELEASE_VERSION }}
         run: |
-          just build "$IMAGE_TAG_UI" "$RELEASE_VERSION"
-          crane copy "$IMAGE_TAG_UI" "$IMAGE_TAG_UI_LATEST"
-          crane copy "$IMAGE_TAG_UI" "$IMAGE_TAG_UI_VERSION"
+          just build $IMAGE_TAG_UI $RELEASE_VERSION
+          crane copy $IMAGE_TAG_UI $IMAGE_TAG_UI_LATEST
+          crane copy $IMAGE_TAG_UI $IMAGE_TAG_UI_VERSION
